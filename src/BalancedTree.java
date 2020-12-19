@@ -3,7 +3,7 @@ public class BalancedTree {
     Node root;
 
     /**
-     * 2-3 Tree class that support some log(n) functions.
+     * 2-3 Tree class that supports some log(n) functions.
      */
     public BalancedTree() {
         root = new Node(null, null);
