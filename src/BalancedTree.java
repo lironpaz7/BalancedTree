@@ -62,17 +62,11 @@ public class BalancedTree {
         x.middle = m;
         x.right = r;
         l.p = x;
-        x.size = l.size;
-        x.sum = l.sum.createCopy();
         if (m != null) {
             m.p = x;
-            x.size += m.size;
-            x.sum.addValue(m.sum.createCopy());
         }
         if (r != null) {
             r.p = x;
-            x.size += r.size;
-            x.sum.addValue(r.sum.createCopy());
         }
         updateKey(x);
         updateValue(x);
