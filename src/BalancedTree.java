@@ -3,7 +3,7 @@ public class BalancedTree {
     Node root;
 
     /**
-     * 2-3 Tree
+     * 2-3 Tree class that support some log(n) functions.
      */
     public BalancedTree() {
         root = new Node(null, null);
@@ -35,7 +35,7 @@ public class BalancedTree {
     }
 
     /**
-     * Update the value of a given node.
+     * Updates the value of a given node.
      *
      * @param x Node.
      */
@@ -50,7 +50,7 @@ public class BalancedTree {
     }
 
     /**
-     * Set the children of a given node.
+     * Sets the children of a given node.
      *
      * @param x Node.
      * @param l Node's left child.
