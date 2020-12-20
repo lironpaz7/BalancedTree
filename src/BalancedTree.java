@@ -174,7 +174,7 @@ public class BalancedTree {
      * @param key Key to search.
      * @return Node that holds the given key, or null if not found.
      */
-    public Node searchKey(Node x, Key key) {
+    private Node searchKey(Node x, Key key) {
         if (x == null) return null;
         if (x.left == null) {
             if (x.key.compareTo(key) == 0) {
@@ -338,9 +338,9 @@ public class BalancedTree {
      *
      * @param x Root
      * @param i Position in the linear order.
-     * @return
+     * @return Node of the 'i' position in the linear order, or null if not found.
      */
-    public Node selectAux(Node x, int i) {
+    private Node selectAux(Node x, int i) {
         if (x == null || x.size < i) {
             return null;
         }
@@ -364,7 +364,7 @@ public class BalancedTree {
      * @param key Key to search.
      * @return The node that holds the key if found in the tree, otherwise return the successor node.
      */
-    public Node Successor(Key key) {
+    private Node Successor(Key key) {
         Node y = searchKey(root, key);
         if (y != null) return y;
         Node x = root;
@@ -389,7 +389,7 @@ public class BalancedTree {
      * @param x Root.
      * @return The rightmost node in the given tree, if the tree is empty then return null.
      */
-    public Node getRightNode(Node x) {
+    private Node getRightNode(Node x) {
         Node y = null;
         while (x != null) {
             if (x.right != null) {
@@ -432,23 +432,17 @@ public class BalancedTree {
                 }
             }
         }
-        if (min == max) {
-            if (right.key.compareTo(min) < 0 || left.key.compareTo(max) > 0) {
-                return null;
-            }
-        }
         if (right.key.compareTo(left.key) < 0) {
             return null;
         }
+        if (left.key.compareTo(max) > 0 || right.key.compareTo(min) < 0) {
+            return null;
+        }
+        if (left == right) {
+            return left.value.createCopy();
+        }
         Value total_l = null;
         Value total_r = null;
-        if (left == right) {
-            if (left.key.compareTo(max) > 0 || left.key.compareTo(min) < 0) {
-                return null;
-            } else {
-                return left.value.createCopy();
-            }
-        }
         while (left != right) {
             // left
             if (left == left.p.right) {
