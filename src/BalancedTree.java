@@ -142,11 +142,7 @@ public class BalancedTree {
             } else if (z.key.compareTo(y.middle.key) < 0) {
                 y = y.middle;
             } else {
-                if (y.right != null) {
-                    y = y.right;
-                } else {
-                    y = y.middle;
-                }
+                y = y.right != null ? y.right : y.middle;
             }
         }
         Node x = y.p;
