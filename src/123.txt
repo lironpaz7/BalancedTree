@@ -1,4 +1,3 @@
-"C:\Program Files\Java\jdk-13.0.2\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=59656:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Ofek\IdeaProjects\DS_Algorithms\out\production\DS_Algorithms Test
 Starting small test...
 Rank for key: (b,0) resulted in: 0
 Search for key: (b,0) resulted in value: null
@@ -13350,5 +13349,3 @@ Search for key: (XNrqkCALEL,3515) resulted in value: 4387
 The sum of values in interval [(BoXuJvAmAH,18336),(LYZBEEOkPf,21458)] is: 5294276
 Select for index: 5671 resulted in key: (zwpgeaebfR,1341)
 Rank for key: (ufesDpxIxP,1900) resulted in: 5053
-
-Process finished with exit code 0

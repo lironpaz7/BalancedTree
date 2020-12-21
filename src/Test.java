@@ -1,7 +1,7 @@
 import java.util.Random;
 
 interface Constants {
-    int SEED = 32154;
+    int SEED = 888;
     int TEST_SIZE = 20000;
     int SMALL_TEST_SIZE = 10;
     int INITIAL_DS_SIZE = TEST_SIZE / 4;

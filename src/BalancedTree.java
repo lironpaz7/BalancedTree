@@ -15,7 +15,7 @@ public class BalancedTree {
      *
      * @param x Node.
      */
-    public void updateKey(Node x) {
+    private void updateKey(Node x) {
         if (x.left == null) {
             return;
         }
@@ -39,7 +39,7 @@ public class BalancedTree {
      *
      * @param x Node.
      */
-    public void updateValue(Node x) {
+    private void updateValue(Node x) {
         x.value = x.left.value.createCopy();
         if (x.middle != null) {
             x.value = x.middle.value.createCopy();
@@ -57,7 +57,7 @@ public class BalancedTree {
      * @param m Node's middle child.
      * @param r Node's right child.
      */
-    public void setChildren(Node x, Node l, Node m, Node r) {
+    private void setChildren(Node x, Node l, Node m, Node r) {
         x.left = l;
         x.middle = m;
         x.right = r;
@@ -79,7 +79,7 @@ public class BalancedTree {
      * @param z Child node to add.
      * @return New node created, if not created returns null.
      */
-    public Node insertAndSplit(Node x, Node z) {
+    private Node insertAndSplit(Node x, Node z) {
         if (x == null) return null;
         Node l = x.left;
         Node m = x.middle;
@@ -193,7 +193,7 @@ public class BalancedTree {
      * @param y Node.
      * @return The parent of the nodes after merged or borrowed.
      */
-    public Node borrowOrMerge(Node y) {
+    private Node borrowOrMerge(Node y) {
         Node z = y.p;
         if (y == z.left) {
             Node x = z.middle;
